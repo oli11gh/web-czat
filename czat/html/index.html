@@ -1,0 +1,43 @@
+ <!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CZAT</title>
+    <meta name = "charset" charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script src = "script.js"></script>
+    <script src= "socket.io/socket.io.js"></script>
+  </head>
+  <body onload = "onload()">
+    <div id = "Main">
+      <audio id = "Ding" src = "dzwiek.mp3"> </audio>
+      <h1 id = "Title">Czat</h1>
+      <div id = "AccessPort">
+        <label id = "NameLabel">Nazwa          </label>
+        <input id = "nick" type = "text">
+				<br><br>
+        <label id = "IDLabel">Kanał    </label>
+        <input id = "kanal" value = "czat1" type = "text">
+        <input id = "ConnectButton" class = "Button" type = "submit" value = "polacz" onclick = "polacz()">
+      </div>
+      <h2 id = "RoomID">Kanał: brak</h2>
+      <div id = "Chat">
+        <p id = "wiadomosc0" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc1" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc2" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc3" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc4" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc5" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc6" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc7" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc8" class = "wiadomosc"> - </p>
+        <p id = "wiadomosc9" class = "wiadomosc"> - </p>
+				<p id = "wiadomosc10" class = "wiadomosc"> - </p>
+        <label id = "MessageLabel">Tekst                      </label>
+        <input id = "czat" type = "text">
+        <input id = "SendMessage" onclick="wyslij()" value = "Wyślij" class = "Button" type = "submit">
+      </div>
+      <br><br>
+    </div>
+  </body>
+</html>
